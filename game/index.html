@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Lantern Market — a spot-the-difference night</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+        <path d="M24 3v4M14 9h20M24 9v3" stroke="#ffcf9a" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <path d="M15 14h18l3 18H12z" fill="#e2603f" stroke="#ffcf9a" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M19 14v18M29 14v18" stroke="#ffcf9a" stroke-width="1.2" opacity=".65"/>
+        <path d="M24 36v5M21 43h6" stroke="#ffcf9a" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <circle cx="24" cy="23" r="12" fill="#ffb066" opacity=".18"/>
+      </svg>
+      <div class="brand-text">
+        <h1>The Lantern Market</h1>
+        <p>a spot-the-difference night</p>
+      </div>
+    </div>
+
+    <div class="hud">
+      <div class="chip scene-chip">
+        <span id="scene-index" class="chip-label">Scene 1 of 3</span>
+        <strong id="scene-name">Lantern Row</strong>
+      </div>
+      <div class="chip found-chip">
+        <strong id="found-count">0 / 10 found</strong>
+        <div id="found-pips" class="pips" aria-hidden="true"></div>
+      </div>
+      <div class="chip timer-chip" id="timer-chip">
+        <div class="timer-bar" aria-hidden="true"><i id="timer-fill"></i></div>
+        <strong id="timer-text">2:00</strong>
+      </div>
+      <button id="hint-button" class="action" type="button">
+        <span class="action-label">Hint</span>
+        <kbd>H</kbd>
+        <b id="hint-count">3</b>
+      </button>
+      <button id="sound-button" class="icon-button" type="button" aria-label="Mute sound" aria-pressed="false">
+        <svg class="icon-on" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 9h3l4-4v14l-4-4H4z" fill="currentColor"/>
+          <path d="M15 8.5c1.6 1 2.4 2.2 2.4 3.5S16.6 14.5 15 15.5M17.6 5.6c2.6 1.7 4 4 4 6.4s-1.4 4.7-4 6.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <svg class="icon-off" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 9h3l4-4v14l-4-4H4z" fill="currentColor"/>
+          <path d="M16 9l5 6M21 9l-5 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <button id="restart-button" class="icon-button" type="button" aria-label="Restart this scene">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 10a7.5 7.5 0 1 1 2 6.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+          <path d="M4 4v6h6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="board" id="board">
+    <figure class="panel" id="panel-a">
+      <div class="panel-frame">
+        <svg id="svg-a" viewBox="0 0 620 470" role="img" aria-label="Night market scene, first copy"></svg>
+        <span class="panel-tag">A</span>
+      </div>
+      <figcaption>Click a difference here…</figcaption>
+    </figure>
+    <div class="board-divider" aria-hidden="true"><span>find the differences</span></div>
+    <figure class="panel" id="panel-b">
+      <div class="panel-frame">
+        <svg id="svg-b" viewBox="0 0 620 470" role="img" aria-label="Night market scene, second copy"></svg>
+        <span class="panel-tag">B</span>
+      </div>
+      <figcaption>…or anywhere in the twin scene.</figcaption>
+    </figure>
+  </main>
+
+  <footer class="footer">
+    <p id="coach">Ten quiet differences hide in each scene. Click either picture where they part ways.</p>
+    <ol id="scene-track" class="scene-track" aria-label="Scenes in this night"></ol>
+    <p id="toast" role="status" aria-live="polite"></p>
+  </footer>
+
+  <div id="overlay" class="overlay" hidden>
+    <div class="overlay-card" id="overlay-card" role="dialog" aria-modal="true" aria-labelledby="overlay-title"></div>
+  </div>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

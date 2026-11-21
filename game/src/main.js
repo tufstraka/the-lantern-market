@@ -338,14 +338,14 @@ function poseShot(mode) {
     return;
   }
   if (mode === 'cover') {
-    hunt.pose(0, pick(['lantern', 'cat', 'window', 'price']), 93, 1);
+    hunt.pose(0, pick(['lantern', 'sign', 'cat', 'window', 'wheel']), 93, 1);
     paintScene();
     paintFoundMarkers();
-    hud.setFound(4, 10);
+    hud.setFound(5, 10);
     hud.updateTrack(hunt.scenes, hunt.index);
     hud.setTime(93, 120);
     hud.setHints(2);
-    hud.toast('Four found, six still hiding.', { quiet: true, hold: 900000 });
+    hud.toast('Five found, five still hiding.', { quiet: true, hold: 900000 });
     return;
   }
   if (mode === 'play') {
@@ -362,12 +362,12 @@ function poseShot(mode) {
     return;
   }
   if (mode === 'found') {
-    hunt.pose(2, pick(['lattice', 'steam', 'teapot', 'umbrella', 'tassel', 'flowers']), 41, 2);
+    hunt.pose(2, pick(['lattice', 'steam', 'teapot', 'umbrella', 'tassel', 'flowers']), 18, 2);
     paintScene();
     paintFoundMarkers();
     hud.setFound(6, 10);
     hud.updateTrack(hunt.scenes, hunt.index);
-    hud.setTime(41, 120);
+    hud.setTime(18, 120);
     hud.setHints(1);
     hud.toast('Six found — the tea house is nearly read.', { quiet: true, hold: 900000 });
     const hinted = hunt.scene.spots.find((spot) => !spot.found);

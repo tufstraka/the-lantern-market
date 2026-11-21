@@ -37,7 +37,7 @@ function layer(svg, name) {
 }
 
 export function markerRadius(hotspot) {
-  return Math.max(16, Math.min(30, Math.max(hotspot.w, hotspot.h) / 2 + 3));
+  return Math.max(15, Math.min(27, Math.max(hotspot.w, hotspot.h) / 2 + 2));
 }
 
 export function addFoundMarker(svg, hotspot, number) {

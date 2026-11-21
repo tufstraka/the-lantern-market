@@ -12,6 +12,8 @@ thing runs from three static files' worth of modules.
 
 ## Play
 
+Live at **https://tufstraka.github.io/the-lantern-market/**
+
 ```sh
 node serve.ts          # serves game/ at http://localhost:8080
 ```

@@ -20,6 +20,10 @@ function teaHouseFacade(B) {
     <rect x="140" y="148" width="340" height="8" fill="#1c1326" opacity=".55"/>
     <ellipse cx="310" cy="292" rx="190" ry="46" fill="url(#lantern-glow)" opacity=".28"/>
     <g>
+      <rect x="396" y="196" width="52" height="40" rx="2" fill="#2a1b26" opacity=".9"/>
+      <rect x="400" y="200" width="44" height="32" rx="1" fill="#e8c79a" opacity=".22"/>
+      <path d="M406 208 h32 M406 216 h26 M406 224 h30" stroke="#e8c79a" stroke-width="1" opacity=".35"/>
+      <path d="M396 196 h52" stroke="#6b4a33" stroke-width="2"/>
       <path d="M462 196 v-16 M462 196 h-4" stroke="#2a1b26" stroke-width="1.4"/>
       ${paperLantern({ x: 462, y: 208, w: 14, h: 18, colour: '#e8a34f', tassel: 4 })}
       <rect x="336" y="204" width="22" height="38" fill="#8a3f3f" opacity=".7"/>
@@ -152,6 +156,10 @@ export const teaHouse = {
         <path d="M124 300 q-3 -4 1 -6" fill="none" stroke="#6b5a3a" stroke-width="2"/>
       </g>
 
+      <g>
+        <path d="M330 286 v10" stroke="#3a2a2a" stroke-width="1.2"/>
+        ${paperLantern({ x: 330, y: 306, w: 18, h: 22, colour: '#e8a34f', tassel: 5 })}
+      </g>
       ${lightPool(310, 372, 220, 74, 0.65)}
 
       <!-- the tea table -->

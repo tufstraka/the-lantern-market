@@ -88,7 +88,7 @@ export class Hud {
     if (this.timerFill) {
       this.timerFill.style.transform = `scaleX(${Math.max(0, Math.min(1, clamped / total))})`;
     }
-    if (this.timerChip) this.timerChip.classList.toggle('urgent', clamped <= 20);
+    if (this.timerChip) this.timerChip.classList.toggle('urgent', clamped <= 30);
   }
 
   setHints(left) {

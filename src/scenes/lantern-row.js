@@ -8,7 +8,7 @@ import {
 import {
   paperLantern, bulbString, awning, counter, crates, signBoard, windowBox,
   standingFigure, cat, bicycle, teapot, glyph, fruitBasket, puddle, potPlant,
-  hangingCloth, roofTiles,
+  hangingCloth, roofTiles, steam,
 } from '../art/props.js';
 
 const CABLE = [-10, 150, 630, 128, 40];
@@ -206,6 +206,24 @@ export const lanternRow = {
       <g opacity=".5">
         <path d="M262 428 q-3 8 2 16 M270 424 q-2 10 3 18 M282 426 q-2 8 2 14" stroke="#ffcf8a" stroke-width="1.1" fill="none" opacity=".5"/>
         <path d="M470 428 q-2 8 2 14 M478 424 q-2 10 3 16" stroke="#ffb469" stroke-width="1" fill="none" opacity=".35"/>
+      </g>
+
+      <!-- chestnut cart at the corner -->
+      <g>
+        <rect x="548" y="352" width="60" height="48" rx="3" fill="#5d3b2c"/>
+        <rect x="544" y="344" width="68" height="10" rx="2" fill="#7a5232"/>
+        <path d="M548 344 H608" stroke="#ffcf8a" stroke-opacity=".35" stroke-width="1.4"/>
+        <ellipse cx="578" cy="350" rx="26" ry="7" fill="#2f1a18"/>
+        <ellipse cx="570" cy="349" rx="7" ry="2.6" fill="#ff7a3a" opacity=".75"/>
+        <ellipse cx="584" cy="351" rx="6" ry="2.2" fill="#ffb469" opacity=".7"/>
+        ${[566, 576, 586, 596].map((x) => `<circle cx="${x}" cy="${347 - (x % 3)}" r="2.6" fill="#8a5a3a"/>`).join('')}
+        ${steam({ x: 578, y: 336, s: 0.65 })}
+        <path d="M550 356 h56" stroke="#00000044" stroke-width="1.4"/>
+        <circle cx="562" cy="406" r="8" fill="none" stroke="#c9b8a3" stroke-width="2"/>
+        <circle cx="598" cy="406" r="8" fill="none" stroke="#c9b8a3" stroke-width="2"/>
+        <path d="M554 400 L578 380 L604 400" fill="none" stroke="#3a2620" stroke-width="2"/>
+        ${glyph('mount', 578, 372, 12, '#e8c79a', 1, 0.5)}
+        <ellipse cx="578" cy="398" rx="38" ry="10" fill="url(#pool-warm)" opacity=".7"/>
       </g>
 
       <!-- the cat and its crate -->

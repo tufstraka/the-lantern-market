@@ -162,6 +162,11 @@ export const fishMarket = {
         </g>
 
         <path d="M246 388 H602" stroke="#00000055" stroke-width="2"/>
+        <g opacity=".75">
+          <rect x="272" y="342" width="52" height="30" rx="2" fill="#241a20"/>
+          ${glyph('fish', 298, 356, 20, '#e8c79a', 1.4, 0.55)}
+          <path d="M280 366 H316" stroke="#e8c79a" stroke-opacity=".3" stroke-width="1"/>
+        </g>
         <path d="M300 388 V410 M540 388 V410" stroke="#2a1a20" stroke-width="4"/>
 
         <!-- the hanging scale -->
